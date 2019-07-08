@@ -7,8 +7,8 @@ full_trains <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidyt
 
 full_trains %>%
   ggplot(aes(journey_time_avg, fill=service)) +
-  geom_histogram(fill='red', bins = 20, alpha=.8) + 
-  gghighlight(service == 'National', unhighlighted_colour = alpha('grey', .6),
+  geom_histogram(fill='red', bins = 20, alpha=.4) + 
+  gghighlight(service == 'National', unhighlighted_colour = alpha('grey', .8),
               use_group_by = F) +
   ggtitle('Histogram of Average Journey time for trains on the SNCF Network',
           subtitle = 'National Service trains highlighted in red') +
